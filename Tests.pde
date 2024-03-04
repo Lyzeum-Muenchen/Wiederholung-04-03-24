@@ -75,6 +75,11 @@ String testeRichtungAnsagen(int richtung){
 void testsZeichnen () {
   for (int nr = 0; nr < 4; nr ++){
     float prozent = erreichte_punktzahl[nr] / (float) MAXIMALE_PUNKTZAHL[nr];
+    textAlign(CENTER, CENTER);
+    fill(0);
+    noStroke();
+    textSize(32);
+    text((nr+1)+"", height * (nr + 0.5), height / 2, height * 0.4);
     stroke(#C1C1C1);
     strokeWeight(5);
     noFill();
@@ -82,6 +87,7 @@ void testsZeichnen () {
     if (erreichte_punktzahl[nr]  == MAXIMALE_PUNKTZAHL[nr]) stroke(#20C918);
     else if (prozent >= 0.5) stroke (#F5C62C);
     else stroke(#F53C28);
+    strokeWeight(7);
     arc(height * (nr + 0.5), height / 2, height * 0.4, height * 0.4, - PI / 2, - PI / 2 + 2 * PI * prozent );
     
   }
