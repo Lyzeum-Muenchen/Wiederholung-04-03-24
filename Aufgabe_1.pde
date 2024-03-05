@@ -2,5 +2,9 @@
 
 public int summe (int a, int b){
   // TODO: implementiere diese Methode richtig
-  return -1;
+  int sum = 0;
+  for(int i = a; i <= b; i++){
+    sum = sum + i;
+  }
+  return sum;
 }
